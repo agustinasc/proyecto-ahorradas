@@ -24,3 +24,45 @@
 .fa-chart-bar, .fa-money-bill-alt, .fa-chart-pie{
     margin: 4%;
 }
+
+
+/* Estilo de formulario balance de inicio */
+
+.balance-sum, .balance-expenses, .balance-total{
+    display: flex;
+    flex-direction: row;
+}
+.input-sum{
+    margin-left: 22%;
+}
+.sum-expenses{
+    margin-left: 31%;
+}
+.total{
+    margin-left: 36%;
+}
+
+.sum{
+    font-family: 'Lexend', sans-serif;
+    font-weight: bold;
+}
+
+
+
+/**** + Nueva operación ****/
+
+.new-operation{
+    display: flex;
+    flex-direction: row;
+}
+.button-new{
+    margin-left: 50%;
+}
+
+
+/**** Filtros de inicio ****/
+
+.is-child, .box{
+    font-family: 'Lexend', sans-serif;
+    font-weight: bold;
+}

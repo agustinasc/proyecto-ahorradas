@@ -36,14 +36,14 @@
       
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-end">
-            <a class="navbar-item"><i class="fas fa-chart-bar"></i>
+            <a class="navbar-item" id="balance-button"><i class="fas fa-chart-bar"></i>
               Balance
             </a>
       
-            <a class="navbar-item"><i class="far fa-money-bill-alt"></i>
+            <a class="navbar-item" id="category-button"><i class="far fa-money-bill-alt"></i>
               Categorías
             </a>
-            <a class="navbar-item"><i class="fas fa-chart-pie"></i>
+            <a class="navbar-item" id="report-button"><i class="fas fa-chart-pie"></i>
               Reportes
             </a>
       
@@ -84,6 +84,82 @@
           </div> -->
         </div>
       </nav>
+
+
+
+      <!-- **** SECCIÓN DE COLUMNAS-INICIO PARA BALANCE - OPERACIONES Y FILTRO **** -->
+      <main>
+
+      <section class="container-balance">
+        
+        <div class="tile is-ancestor">
+          <div class="tile is-4 is-vertical is-parent">
+            <div class="tile is-child box">
+              <h2 class="title">Balance</h2>
+              <div class="balance-sum">
+              <div class="sum">Ganancias</div>
+              <div class="input-sum">+$0</div>
+            </div>
+              <div class="balance-expenses">
+              <div class="sum">Gastos</div>
+              <div class="sum-expenses">-$0</div>
+            </div>
+              <div class="balance-total">
+              <div class="sum">Total</div>
+              <div class="total">$0</div>
+            </div>
+            </div>
+            <div class="tile is-child box">
+              <h2 class="title">Filtros</h2>
+              <div>Ocultar Filtros</div>
+              <label for="tipo" class="label">Tipo</label>
+              <div class="select is-fullwidth">
+                <select class="">
+                  <option>Todos</option>
+                  <option>Gasto</option>
+                  <option>Ganancia</option>
+                </select>
+              </div>
+              <label for="categoria" class="label">Categoría</label>
+              <div class="select is-fullwidth">
+                <select class="">
+                  <option>Todas</option>
+                  <option>Comida</option>
+                  <option>Servicios</option>
+                  <option>Salidas</option>
+                  <option>Educación</option>
+                  <option>Transporte</option>
+                  <option>Trabajo</option>
+                  <option>Deporte</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="fecha" class="label">Desde</label>
+                <input class="input" type="date" name="label" id="">
+              </div>
+              <label for="ordenar" class="label">Ordenar por</label>
+              <div class="select is-fullwidth">
+                <select class="">
+                  <option>Más reciente</option>
+                  <option>Menos reciente</option>
+                  <option>Mayor monto</option>
+                  <option>Menor monto</option>
+                  <option>A/Z</option>
+                  <option>Z/A</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <div class="tile is-child box">
+              <span class="new-operation"><h2 class="title">Operaciones</h2>
+              <button id="add-operation" class="button is-info is-rounded button-new">+ Nueva operación</button></span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
 
 
 
