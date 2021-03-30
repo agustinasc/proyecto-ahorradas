@@ -47,6 +47,11 @@
     font-weight: bold;
 }
 
+.filter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 
 /**** + Nueva operación ****/
