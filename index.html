@@ -146,6 +146,7 @@
             <div class="tile is-child box">
               <span class="new-operation"><h2 class="title">Operaciones</h2>
               <button id="add-operation" class="button is-info is-rounded button-new">+ Nueva operación</button></span>
+              <section id="operation-table"></section>
             </div>
           </div>
 
@@ -167,14 +168,14 @@
           <div class="field">
             <label class="label">Descripción</label>
             <div class="control">
-              <input class="input" type="text" placeholder="Ingresa una descripción">
+              <input id="input-description" class="input" type="text" placeholder="Ingresa una descripción">
             </div>
           </div>
         
           <div class="field">
             <label class="label">Monto</label>
             <div class="control">
-              <input class="input" type="number" placeholder="Ingresa un monto">
+              <input id="input-amount" class="input" type="number" placeholder="Ingresa un monto">
             </div>
           </div>  
         
@@ -182,7 +183,7 @@
             <label class="label">Tipo</label>
             <div class="control">
               <div class="select">
-                <select>
+                <select id="input-result">
                   <option>Gasto</option>
                   <option>Ganancia</option>
                 </select>
@@ -193,7 +194,7 @@
             <label class="label">Categoría</label>
             <div class="control">
               <div class="select">
-                <select>
+                <select id="input-categories">
                   <option>Comida</option>
                   <option>Servicios</option>
                   <option>Salidas</option>
@@ -205,12 +206,19 @@
             </div>
           </div>
 
+          <div class="field">
+            <label for="type-date" class="label">Fecha</label>
+            <div class="control">
+              <input id="input-date" class="input" type="date" name="label">
+            </div>
+          </div>  
+
           <div class="field is-grouped">
             <div class="control">
-              <button class="button is-link">Agregar</button>
+              <button id="add-operation-btn" class="button is-link">Agregar</button>
             </div>
             <div class="control">
-              <button class="button is-link is-light">Cancelar</button>
+              <button id="cancel-operation-btn" class="button is-link is-light">Cancelar</button>
             </div>
           </div>        
         
