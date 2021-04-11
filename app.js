@@ -33,39 +33,7 @@ cancelOperationBtn.addEventListener('click', ()=>{
     newOperationSection.style.display = 'none'
 })
 
-/* BOTON DE AGREGAR NUEVA OPERACION DEL FORM  */
-
-addOperationBtn.addEventListener('click', (e)=>{
-    e.preventDefault();
-    balanceSection.style.display = 'block';
-    //console.log(inputDescription.value)
-    const newOperation = {
-        descripcion: inputDescription.value, 
-        monto: inputAmount.value, 
-        tipo: inputResult.value, 
-        categoria: inputCategories.value,
-        fecha: inputDate.value 
-    }
-    //console.log(newOperation);
-    operation.push(newOperation);
-    localStorage.setItem('operation', JSON.stringify(operation));
-    const operationLocalStorage = JSON.parse(localStorage.getItem('operation'));
-    showOperationTable(operationLocalStorage)
-})
-
-//****** PARA BLANQUEAR EL FORM ******/ => NO FUNCIONA TODAVIA!!!!!!
-
-// const blankForm = (blank) =>{
-//     newOperation = {
-//         descripcion: inputDescription.value, 
-//         monto: inputAmount.value, 
-//         tipo: inputResult.value, 
-//         categoria: inputCategories.value,
-//         fecha: inputDate.value 
-//     }
-// }
-
-const operation = [];
+let operation = [];
 
 //********* FUNCION PARA AGREGAR OPERACIONES A LA TABLA DE OPERACIONES *********/
 const showOperationTable = (operation) =>{
@@ -85,3 +53,41 @@ const showOperationTable = (operation) =>{
         //console.log(caja);   
     }
 }
+
+
+/* BOTON DE AGREGAR NUEVA OPERACION DEL FORM  */
+
+addOperationBtn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    operation = JSON.parse(localStorage.getItem('operation'));
+    balanceSection.style.display = 'block';
+    //console.log(inputDescription.value)
+    const newOperation = {
+        descripcion: inputDescription.value, 
+        monto: inputAmount.value, 
+        tipo: inputResult.value, 
+        categoria: inputCategories.value,
+        fecha: inputDate.value 
+    }
+    //console.log(newOperation);
+    operation.push(newOperation);
+    localStorage.setItem('operation', JSON.stringify(operation));
+    operationLocalStorage = JSON.parse(localStorage.getItem('operation'));
+    showOperationTable(operationLocalStorage)
+})
+
+let operationLocalStorage = JSON.parse(localStorage.getItem('operation'));
+showOperationTable(operationLocalStorage);
+
+//****** PARA BLANQUEAR EL FORM ******/ => NO FUNCIONA TODAVIA!!!!!!
+
+// const blankForm = (blank) =>{
+//     newOperation = {
+//         descripcion: inputDescription.value, 
+//         monto: inputAmount.value, 
+//         tipo: inputResult.value, 
+//         categoria: inputCategories.value,
+//         fecha: inputDate.value 
+//     }
+// }
+
