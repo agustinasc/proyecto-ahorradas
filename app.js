@@ -33,7 +33,7 @@ cancelOperationBtn.addEventListener('click', ()=>{
     newOperationSection.style.display = 'none'
 })
 
-/* BOTON DE AGREGAR NUEVA OPERACION DEL FORM  */
+/******* BOTON DE AGREGAR NUEVA OPERACION DEL FORM  *******/
 
 addOperationBtn.addEventListener('click', (e)=>{
     e.preventDefault();
