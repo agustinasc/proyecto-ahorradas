@@ -51,7 +51,7 @@ const showOperationTable = (operation) =>{
         //console.log(operation[i].descripcion);
         //console.log(caja);   
     }
-} 
+}
 
 
 /* BOTON DE AGREGAR NUEVA OPERACION DEL FORM  */
@@ -75,7 +75,7 @@ addOperationBtn.addEventListener('click', (e)=>{
     showOperationTable(operation)
 })
 
-let operationLocalStorage = JSON.parse(localStorage.getItem('operation'));
+let operation = JSON.parse(localStorage.getItem('operation'));
 showOperationTable(operationLocalStorage);
 
 //****** PARA BLANQUEAR EL FORM ******/ => NO FUNCIONA TODAVIA!!!!!!
