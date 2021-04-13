@@ -40,7 +40,6 @@ const showOperationTable = (operation) =>{
     operationTable.innerHTML = '';
     for (let i = 0; i < operation.length; i++) {
         const box = 
-        //  //=> FALTA LA TABLA PARA PINTARLO, EN LOS SPANS!!!!!!!
         `<article>
         <span>${operation[i].descripcion}</span>
         <span>${operation[i].monto}</span>
@@ -52,7 +51,7 @@ const showOperationTable = (operation) =>{
         //console.log(operation[i].descripcion);
         //console.log(caja);   
     }
-}
+} 
 
 
 /* BOTON DE AGREGAR NUEVA OPERACION DEL FORM  */
@@ -72,11 +71,11 @@ addOperationBtn.addEventListener('click', (e)=>{
     //console.log(newOperation);
     operation.push(newOperation);
     localStorage.setItem('operation', JSON.stringify(operation));
-    operationLocalStorage = JSON.parse(localStorage.getItem('operation'));
-    showOperationTable(operationLocalStorage)
+    operation = JSON.parse(localStorage.getItem('operation'));
+    showOperationTable(operation)
 })
 
-let operationLocalStorage = JSON.parse(localStorage.getItem('operation'));
+let operation = JSON.parse(localStorage.getItem('operation'));
 showOperationTable(operationLocalStorage);
 
 //****** PARA BLANQUEAR EL FORM ******/ => NO FUNCIONA TODAVIA!!!!!!
