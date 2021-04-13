@@ -75,7 +75,7 @@ addOperationBtn.addEventListener('click', (e)=>{
     showOperationTable(operation)
 })
 
-let operation = JSON.parse(localStorage.getItem('operation'));
+let operationLocalStorage = JSON.parse(localStorage.getItem('operation'));
 showOperationTable(operationLocalStorage);
 
 //****** PARA BLANQUEAR EL FORM ******/ => NO FUNCIONA TODAVIA!!!!!!
