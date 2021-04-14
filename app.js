@@ -58,7 +58,8 @@ const showOperationTable = (operation) =>{
 
 addOperationBtn.addEventListener('click', (e)=>{
     e.preventDefault();
-    operation = JSON.parse(localStorage.getItem('operation'));
+    // localStorage.setItem('operation', JSON.stringify(operation));
+    // operation = JSON.parse(localStorage.getItem('operation'));
     balanceSection.style.display = 'block';
     //console.log(inputDescription.value)
     const newOperation = {
@@ -75,8 +76,9 @@ addOperationBtn.addEventListener('click', (e)=>{
     showOperationTable(operation)
 })
 
-operation = JSON.parse(localStorage.getItem('operation'));
-showOperationTable(operation);
+JSON.parse(localStorage.getItem('operation')) == null ? showOperationTable(operation) : showOperationTable(JSON.parse(localStorage.getItem('operation')))
+
+
 
 //****** PARA BLANQUEAR EL FORM ******/ => NO FUNCIONA TODAVIA!!!!!!
 
