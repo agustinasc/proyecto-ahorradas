@@ -101,9 +101,12 @@
               <h2 class="title">Filtros</h2>
                </div>
                <div class="hide-filters">
-              <div><a href="#" id="hiding-filters">Ocultar filtros</a></div>
+              <div><a href="#" id="hiding-filters" style="visibility: visible;">Ocultar filtros</a>
+                <a href="#" id="show-filters" style="visibility: hidden;">Mostrar filtros</a>
+              </div>
               </div>
             </div>
+            <div id="filters-box" style="visibility: visible;">
               <label for="tipo" class="label">Tipo</label>
               <div class="select is-fullwidth">
                 <select class="">
@@ -141,6 +144,7 @@
                 </select>
               </div>
             </div>
+          </div>
 
           </div>
 
@@ -243,5 +247,6 @@
 
 
     <script src="./app.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
