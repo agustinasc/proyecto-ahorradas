@@ -31,7 +31,7 @@
     <nav class="navbar is-info" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="#">
-            <i class="fas fa-wallet"></i><p class="title is-3 is-spaced">Ahorradas</p>
+            <i class="fas fa-wallet"></i><p class="title is-3 is-spaced has-text-white">Ahorradas</p>
             <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
           </a>
       
@@ -61,22 +61,22 @@
             </a>
           </div>
         </div>
-        <!------ FIN BOTONES DEL NAV ------>
+            <!------ FIN BOTONES DEL NAV ------>
 
     </nav>
 
-    <!------ FIN DEL NAV ------>
+            <!------ FIN DEL NAV ------>
 
-    <!------ INICIO DEL MAIN ------>
+            <!------ INICIO DEL MAIN ------>
 
     <main>
-      <!-- **** SECCIÓN DE COLUMNAS-INICIO PARA BALANCE - OPERACIONES Y FILTRO **** -->
+             <!-- **** SECCIÓN DE COLUMNAS-INICIO PARA BALANCE - OPERACIONES Y FILTRO **** -->
 
       <section id="balance-section" class="container-balance">
         
         <div class="tile is-ancestor">
 
-          <!------ INICIO COLUMNA BALANCE Y FILTROS ------>
+              <!------ INICIO COLUMNA BALANCE Y FILTROS ------>
 
           <div class="tile is-4 is-vertical is-parent">
 
@@ -148,9 +148,9 @@
 
           </div>
 
-          <!------ FIN COLUMNA BALANCE Y FILTROS ------>
+              <!------ FIN COLUMNA BALANCE Y FILTROS ------>
 
-          <!------ INICIO COLUMNA OPERACIONES ------>
+              <!------ INICIO COLUMNA OPERACIONES ------>
 
           <div class="tile is-parent">
             <div class="tile is-child box">
@@ -166,7 +166,7 @@
           </div>
           
 
-          <!------ FIN COLUMNA OPERACIONES ------>
+              <!------ FIN COLUMNA OPERACIONES ------>
 
 
 
@@ -174,74 +174,37 @@
 
       </section>
 
-      <!------ INICIO SECCION NUEVA OPERACION ------>
-
-      <section id="new-operation-section" class="box">
+      
+      <div class="section columns mt-2 has-background-info-light">
+            
+              <!------ INICIO SECCION NUEVA OPERACION ------>
         
-        <form class="box">
-          <h1 class="title is-2">Nueva Operación</h1>
+          <div class="column is-10 is-offset-1">
           
-          <div class="field">
-            <label class="label">Descripción</label>
-            <div class="control">
-              <input id="input-description" class="input" type="text" placeholder="Ingresa una descripción">
-            </div>
-          </div>
-        
-          <div class="field">
-            <label class="label">Monto</label>
-            <div class="control">
-              <input id="input-amount" class="input" type="number" placeholder="Ingresa un monto">
-            </div>
-          </div>  
-        
-          <div class="field">
-            <label class="label" id="filter-type">Tipo</label>
-            <div class="control">
-              <div class="select">
-                <select id="input-result">
-                  <option>Gasto</option>
-                  <option>Ganancia</option>
-                </select>
               </div>
-            </div>
-          </div>
-          <div class="field">
-            <label class="label" id="filter-category">Categoría</label>
-            <div class="control">
-              <div class="select">
-                <select id="input-categories">
-                  <option>Comida</option>
-                  <option>Servicios</option>
-                  <option>Salidas</option>
-                  <option>Educación</option>
-                  <option>Transporte</option>
-                  <option>Trabajo</option>
-                </select>
-              </div>
-            </div>
-          </div>
 
-          <div class="field">
-            <label for="type-date" class="label">Fecha</label>
-            <div class="control">
-              <input id="input-date" class="input" type="date" name="label">
-            </div>
-          </div>  
+              <div class="field">
+                <label for="type-date" class="label">Fecha</label>
+                <div class="control">
+                  <input id="input-date" class="input" type="date" name="label">
+                </div>
+              </div>  
 
-          <div class="field is-grouped">
-            <div class="control">
-              <button id="add-operation-btn" class="button is-link">Agregar</button>
-            </div>
-            <div class="control">
-              <button id="cancel-operation-btn" class="button is-link is-light">Cancelar</button>
-            </div>
-          </div>        
-        
-        </form>
+              <div class="buttons is-right mt-6">
+                
+                  <button id="add-operation-btn" class="button is-link">Agregar</button>
+              
+                  <button id="cancel-operation-btn" class="button is-link is-light">Cancelar</button>
+                
+              </div>        
+            
+            </form>
 
-      </section>
-      <!------ FIN SECCION NUEVA OPERACION ------>
+          </section>
+                  <!------ FIN SECCION NUEVA OPERACION ------>
+        </div>
+      </div>
+
     </main>
     <!------ FIN DEL MAIN ------>
 
