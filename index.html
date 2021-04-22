@@ -107,40 +107,40 @@
               </div>
             </div>
             <div id="filters-box" style="visibility: visible;">
-              <label for="tipo" class="label">Tipo</label>
+              <label for="type-balance" class="label">Tipo</label>
               <div class="select is-fullwidth">
-                <select class="">
-                  <option>Todos</option>
-                  <option>Gasto</option>
-                  <option>Ganancia</option>
+                <select class="" id="type-balance">
+                  <option value="Todos">Todos</option>
+                  <option value="Gasto">Gasto</option>
+                  <option value="Ganancia">Ganancia</option>
                 </select>
               </div>
-              <label for="categoria" class="label">Categoría</label>
+              <label for="category-balance" class="label">Categoría</label>
               <div class="select is-fullwidth">
-                <select class="">
-                  <option>Todas</option>
-                  <option>Comida</option>
-                  <option>Servicios</option>
-                  <option>Salidas</option>
-                  <option>Educación</option>
-                  <option>Transporte</option>
-                  <option>Trabajo</option>
-                  <option>Deporte</option>
+                <select class="" id="category-balance">
+                  <option value="Todas">Todas</option>
+                  <option value="Comida">Comida</option>
+                  <option value="Servicios">Servicios</option>
+                  <option value="Salidas">Salidas</option>
+                  <option value="Educación">Educación</option>
+                  <option value="Transporte">Transporte</option>
+                  <option value="Trabajo">Trabajo</option>
+                  <option value="Deporte">Deporte</option>
                 </select>
               </div>
               <div class="field">
-                <label for="fecha" class="label">Desde</label>
-                <input class="input" type="date" name="label" id="">
+                <label for="fecha" class="label" id="">Desde</label>
+                <input class="input" type="date" name="label" id="filter-from">
               </div>
-              <label for="ordenar" class="label">Ordenar por</label>
+              <label for="ordenar" class="label" id="filter-order">Ordenar por</label>
               <div class="select is-fullwidth">
-                <select class="">
-                  <option>Más reciente</option>
-                  <option>Menos reciente</option>
-                  <option>Mayor monto</option>
-                  <option>Menor monto</option>
-                  <option>A/Z</option>
-                  <option>Z/A</option>
+                <select class="" id="order-balance">
+                  <option value="more-recent">Más reciente</option>
+                  <option value="less-recent">Menos reciente</option>
+                  <option value="big-amount">Mayor monto</option>
+                  <option value="less-amount">Menor monto</option>
+                  <option value="a-z">A/Z</option>
+                  <option value="z-a">Z/A</option>
                 </select>
               </div>
             </div>
