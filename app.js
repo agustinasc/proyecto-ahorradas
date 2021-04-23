@@ -33,6 +33,13 @@ cancelOperationBtn.addEventListener('click', ()=>{
     newOperationSection.style.display = 'none'
 })
 
+let days = new Date().getDate();
+let months = new Date().getMonth() + 1;
+let years = new Date().getFullYear();
+
+inputDate.value = `${years}-${months < 10 ? '0' + months: months}-${days < 10 ? '0' + days: days }`;
+
+
 let operation = [];
 
 //********* FUNCION PARA AGREGAR OPERACIONES A LA TABLA DE OPERACIONES *********/
