@@ -33,7 +33,7 @@
     <nav class="navbar is-info" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="#">
-            <i class="fas fa-wallet"></i><p class="title is-3 is-spaced has-text-white">Ahorradas</p>
+            <i class="fas fa-wallet"></i><p class="title is-3 is-spaced has-text-white">AhorrADAS</p>
             <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
           </a>
       
@@ -72,7 +72,7 @@
             <!------ INICIO DEL MAIN ------>
 
     <main class="box has-background-info-light">
-      
+
              <!-- **** SECCIÓN DE COLUMNAS-INICIO PARA BALANCE - OPERACIONES Y FILTRO **** -->
 
       <section id="balance-section" class="container-balance">
@@ -153,37 +153,61 @@
 
               <!------ FIN COLUMNA BALANCE Y FILTROS ------>
 
-              <!------ INICIO COLUMNA OPERACIONES ------>
+              <!------ INICIO COLUMNA - SECTION OPERACIONES ------>
 
           <div class="tile is-parent">
             <div class="tile is-child box">
-              <span class="new-operation"><h2 class="title">Operaciones</h2>
-              <button id="add-operation" class="button is-info is-rounded button-new">+ Nueva operación</button></span>
-              <figure class="image is-4by3">
-                <img src="./img/alcancia.jpg">
-              </figure>
+              <div class="columns">
+                
+                <div class="column is-half">
+                  <h2 class="title">Operaciones</h2>
+                </div>
+
+                <div class="column has-text-right-tablet">
+                  <button id="add-operation" class="button is-info">
+                    + Nueva operación
+                  </button>
+                </div>
+              </div>
+              
+              <!-- CON OPERACIONES -->
+              
+              <div class="columns">
+                <div class="column is-3 is-family-primary is-size-5">Descripción</div>
+                <div class="column is-3 is-family-primary is-size-5">Categoría</div>
+                <div class="column is-2 is-family-primary is-size-5">Fecha</div>
+                <div class="column is-2 is-family-primary is-size-5">Monto</div>
+                <div class="column is-2 is-family-primary is-size-5">Acciones</div>
+              </div>
+
               <section id="operation-table"></section>
+
+              <!-- SIN OPERACIONES -->
+              <div class="">
+                <figure class="image is-4by3">
+                  <img src="./img/alcancia.jpg">
+                </figure>
+                <h4 class="title is-4 has-text-centered my-4">Sin Resultados.</h4>
+                <p class="is-6 has-text-centered	my-4">Cambia los filtros o agrega operaciones.</p> 
+              </div>
+              
             
             </div>
 
           </div>
           
-
-              <!------ FIN COLUMNA OPERACIONES ------>
-
-
+              <!------ FIN COLUMNA - SECTION OPERACIONES ------>
 
         </div>
 
       </section>
 
-      
       <div class="section columns mt-2 has-background-info-light">
             
               <!------ INICIO SECCION NUEVA OPERACION ------>
         
           <div class="column is-10 is-offset-1">
-          <!-- esta es la parte eliminada -->
+
             <section id="new-operation-section" class="box">
             
             <form class="">

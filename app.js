@@ -102,4 +102,12 @@ JSON.parse(localStorage.getItem('operation')) == null ? showOperationTable(opera
 //     }
 // }
 
+//********* FUNCION PARA APARECER Y DESAPARECER IMAGENES *********/
+
+// const hiddenPicture = () =>{
+
+
+
+// }
+
 
