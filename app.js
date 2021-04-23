@@ -36,6 +36,8 @@ cancelOperationBtn.addEventListener('click', ()=>{
 let operation = [];
 
 //********* FUNCION PARA AGREGAR OPERACIONES A LA TABLA DE OPERACIONES *********/
+
+
 const showOperationTable = (operation) =>{
     operationTable.innerHTML = '';
     for (let i = 0; i < operation.length; i++) {
@@ -54,13 +56,14 @@ const showOperationTable = (operation) =>{
 }
 
 
-/* BOTON DE AGREGAR NUEVA OPERACION DEL FORM  */
+/*******  BOTON DE AGREGAR NUEVA OPERACION DEL FORM  *******/
 
 addOperationBtn.addEventListener('click', (e)=>{
     e.preventDefault();
     // localStorage.setItem('operation', JSON.stringify(operation));
     // operation = JSON.parse(localStorage.getItem('operation'));
     balanceSection.style.display = 'block';
+    newOperationSection.style.display = 'none';
     //console.log(inputDescription.value)
     const newOperation = {
         descripcion: inputDescription.value, 
