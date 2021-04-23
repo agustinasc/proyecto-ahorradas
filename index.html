@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <title>AhorrADAS</title>
+    
     <!-- FRAMEWORK -->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
@@ -19,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 
-    <title>Ahorradas</title>
+    <link rel="shortcut icon" href="./img/favicom.jpg" type="image/x-icon">
 
 
 
@@ -44,7 +46,7 @@
         
         <!------ INICIO BOTONES DEL NAV ------>
 
-        <div id="navbarBasicExample" class="navbar-menu">
+        <div id="navbarBasicExample" class="navbar-menu mr-4">
           <div class="navbar-end">
             <a class="navbar-item" id="balance-button">
               <i class="fas fa-chart-bar"></i>
@@ -69,7 +71,7 @@
 
             <!------ INICIO DEL MAIN ------>
 
-    <main>
+    <main class="box has-background-info-light">
              <!-- **** SECCIÓN DE COLUMNAS-INICIO PARA BALANCE - OPERACIONES Y FILTRO **** -->
 
       <section id="balance-section" class="container-balance">
@@ -106,7 +108,7 @@
               </div>
               </div>
             </div>
-            <div id="filters-box" style="visibility: visible;">
+            <div id="filters-box" class="mt-4" style="visibility: visible;">
               <label for="type-balance" class="label">Tipo</label>
               <div class="select is-fullwidth">
                 <select class="" id="type-balance">
@@ -115,7 +117,7 @@
                   <option value="Ganancia">Ganancia</option>
                 </select>
               </div>
-              <label for="category-balance" class="label">Categoría</label>
+              <label for="category-balance" class="label mt-2">Categoría</label>
               <div class="select is-fullwidth">
                 <select class="" id="category-balance">
                   <option value="Todas">Todas</option>
@@ -129,10 +131,10 @@
                 </select>
               </div>
               <div class="field">
-                <label for="fecha" class="label" id="">Desde</label>
+                <label for="fecha" class="label mt-2" id="">Desde</label>
                 <input class="input" type="date" name="label" id="filter-from">
               </div>
-              <label for="ordenar" class="label" id="filter-order">Ordenar por</label>
+              <label for="ordenar" class="label mt-2" id="filter-order">Ordenar por</label>
               <div class="select is-fullwidth">
                 <select class="" id="order-balance">
                   <option value="more-recent">Más reciente</option>
