@@ -63,7 +63,7 @@ const showOperationTable = (operation) =>{
         //console.log(caja);   
     }
 
-    //********* FUNCION PARA APARECER Y DESAPARECER IMAGEN CUANDO EXISTEN OPERACIONES *********/
+    //******** FUNCION PARA APARECER Y DESAPARECER IMAGEN CUANDO EXISTEN OPERACIONES ********/
 
     const hiddenPicture = (operation) =>{
         if(operation.length >= 1){
