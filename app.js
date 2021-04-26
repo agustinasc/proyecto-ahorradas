@@ -51,18 +51,18 @@ const showOperationTable = (operation) =>{
     operationTable.innerHTML = '';
     for (let i = 0; i < operation.length; i++) {
         const box = 
-        `<article>
-        <span>${operation[i].descripcion}</span>
-        <span>${operation[i].monto}</span>
-        <span>${operation[i].tipo}</span>
-        <span>${operation[i].categoria}</span>
-        <span>${operation[i].fecha}</span>
+        `<article class="columns px-2 has-text-centered">
+            <div class="column is-3 is-family-monospace">${operation[i].descripcion}</div>
+            <div class="column is-2 is-family-monospace tag is-primary is-light is-medium">${operation[i].categoria}</div>
+            <div class="column is-3 is-family-monospace">${operation[i].fecha}</div>
+            <div class="column is-2 is-family-monospace">$${operation[i].monto}</div>
+            <div class="column is-2 is-family-monospace">${operation[i].tipo}</div>
         </article>`;
         operationTable.insertAdjacentHTML('beforeend', box);
         //console.log(operation[i].descripcion);
         //console.log(caja);   
     }
-    
+
     //********* FUNCION PARA APARECER Y DESAPARECER IMAGEN CUANDO EXISTEN OPERACIONES *********/
 
     const hiddenPicture = (operation) =>{
