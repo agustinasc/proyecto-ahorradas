@@ -69,7 +69,7 @@ const showOperationTable = (operation) =>{
         if(operation.length >= 1){
             includesOperation.style.display = 'block';
             noIncludesOperation.style.display = 'none';
-        }else if (operation === 0){
+        }else if (operation.length === 0){
             includesOperation.style.display = 'none';
             noIncludesOperation.style.display = 'block'
         }
