@@ -59,14 +59,10 @@
     display: none;
 }
 
-.new-operation{
+/* .new-operation{
     display: flex;
     flex-direction: row;
-}
-.button-new{
-    margin-left: 50%;
-}
-
+} */
 
 /**** Filtros de inicio ****/
 
