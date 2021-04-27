@@ -1,21 +1,22 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
-}
+} */
 /* :root{
     
 } */
 /****** ESTILOS DEL NAV ******/
-.navbar{
+/* .navbar{
     font-family: 'Lexend', sans-serif;
     font-weight: 600;
-}
- /* nav{
+} */
+/*
+ nav{
     font-size: 5rem;
-}   */
-.fa-wallet {
+}   
+ .fa-wallet {
     margin: 1rem;
     color: white;
     font-size: 4em;
@@ -23,8 +24,8 @@
 
 .fa-chart-bar, .fa-money-bill-alt, .fa-chart-pie{
     margin: 4%;
-}
-
+} */
+ 
 
 /* Estilo de formulario balance de inicio */
 

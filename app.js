@@ -16,7 +16,7 @@ const operationTable = document.getElementById('operation-table');
 const includesOperation = document.getElementById('includes-operation');
 const noIncludesOperation = document.getElementById('no-includes-operation')
 
-
+const navbarBurguerBtn = document.getElementById('navbar-burguer-btn')
 //********* EVENTS *********/
 
 addOperation.addEventListener('click', ()=>{
@@ -117,6 +117,14 @@ JSON.parse(localStorage.getItem('operation')) == null ? showOperationTable(opera
 //         fecha: inputDate.value 
 //     }
 // }
+
+//****** MENU HAMBURGUESA *******//
+
+navbarBurguerBtn.addEventListener('click', ()=>{
+    // navbarBurgerBtn.toggleClass("is-active");
+    // navbarBasicExample.toggleClass("is-active");
+    alert('skl')
+})
 
 
 
