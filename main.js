@@ -1,5 +1,7 @@
+/* *******DOM********* */
 
 
+//Filtros-Tipo
 const hidingFilters = document.getElementById ("hiding-filters");//Ocultar filtros
 const filtersBox = document.getElementById ("filters-box");//caja de formulario-select
 const showFilters = document.getElementById ("show-filters");//Mostrar filtros
@@ -15,6 +17,14 @@ const categoryBalance = document.getElementById("category-balance");
 const orderBalance = document.getElementById("order-balance");
 
 
+//Reportes
+const reportSection = document.getElementById("report-section");
+const reportButton = document.getElementById("report-button");
+
+
+
+
+/* ******EVENTS****** */
 
 
 //Ocultar y Mostrar Filtros
@@ -35,24 +45,6 @@ showFilters.addEventListener ("click", () => {
 //Filtrar Operaciones
 
 
-//Prueba de filtrado:
-/* typeBalance.addEventListener("change", () =>{
-     console.log(typeBalance.value); 
-    console.log(operation); 
-   const result = operation.filter(operations => operations.tipo === typeBalance.value)
-   typeBalance.value === "Todos" ? showOperationTable(operation) : showOperationTable(result);
-   const result = operation.filter(operations => console.log(operations))
-   console.log(result);
-   showOperationTable(result);
-});
-
-
- categoryBalance.addEventListener("change", () =>{
-    const result= operation.filter(operations => operations.categoria === categoryBalance.value);
-    console.log(result)
-    console.log(categoryBalance.value);
-    categoryBalance.value === "Todas" ? showOperationTable(operation) : showOperationTable(result);
-}) */
  
 //Filtros Tipo y Categoría
 
@@ -126,6 +118,42 @@ orderBalance.addEventListener("change", ()=>{
     }
     showOperationTable(newOrder)
 })
+
+
+
+//Reportes
+
+reportButton.addEventListener("click", ()=>{
+  reportSection.style.display = "block"
+  balanceSection.style.display = "none" 
+})
+
+const categoryArr = ["Comida", "Servicios", "Salidas", "Educación", "Transporte", "Trabajo", "Deporte"]
+
+//const categoryRute = categoryArr.forEach(element => console.log(element));
+/* const categoryRute = categoryArr.forEach(element =>{
+    operation.filter(operations => operations === console.log(operations));
+}) */
+
+const array = [];
+//console.log(operation)
+//operation = JSON.parse(localStorage.getItem('operation')) Hace desaparecer las nuevas operaciones del documento
+
+for (let i = 0; i < categoryArr.length; i++){
+    const arrSpending = operation.filter(element => element.categoria === categoryArr[i] && element.tipo === "Gasto").reduce((inicial, current) => Number(inicial) + Number(current.monto) ,0)
+    const arrGain = operation.filter(element => element.categoria === categoryArr[i] && element.tipo === "Ganancia").reduce((inicial, current) => Number(inicial) + Number(current.monto) ,0)
+    array.push({nombre: categoryArr[i], ganancia: arrGain, gasto: arrSpending})
+    /* localStorage.setItem("array", JSON.stringify(array));
+    array = JSON.parse(localStorage.getItem("array")); No Va!*/
+}
+
+
+const result = Math.max(...array.map(valor => valor.ganancia))
+console.log(array);
+
+
+
+
 
 
 

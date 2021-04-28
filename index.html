@@ -272,6 +272,129 @@
         </div>
       </div>
       <!------ FIN COLUMNA - SECTION OPERACIONES ------>
+
+
+
+      <!-- *******Reportes******** -->
+
+      <section id="report-section">
+        <div class="box column is-6 is-offset-3 is-10-mobile is-offset-1-mobile px-5 py-4 fit-content">
+          <!-- Sin reporte -->
+          <div class="field">
+            <p class="tile is-size-3 has-text-weight-bold">Reportes</p>
+
+            <!-- ocultar al tener reportes -->
+            <div class="is-hidden"> <!-- sacar la clase al terminar el código -->
+            <div class="column is-6 is-offset-3">
+              <figure class="image">
+                <img src="./img/report.png">
+              </figure>
+            </div>
+            <div class="column is-align-items-center">
+              <p class="title is-size-4 is-size-6-mobile has-text-centered">Operaciones insuficientes</p>
+              <p class="subtitle is-size-6 is-size-7-mobile has-text-centered">Prueba agregando más operaciones</p>
+            </div>
+          </div>
+
+          </div>
+          <!-- Con reporte -->
+        <div id="with-report"> <!-- poner la class is-hidden -->
+
+          <section class="section mb-5" id="resumen">
+            <h4 class="title is-size-4 mb-5 pb-4">Resumen</h4>
+
+            <!-- Categoría con mayor ganancia-->
+            <div class="columns is-mobile">
+              <div class="column is-6 has-text-weight-semibold">
+                Categoría con mayor ganancia
+              </div>
+              <div class="column is-3 has-text-right">
+                <span
+                  class="tag is-primary is-light"
+                  id="categoria-mayor-ganancia"
+                ></span>
+              </div>
+              <div
+                class="column is-3 has-text-weight-semibold has-text-right has-text-success"
+                id="categoria-mayor-ganancia-monto"
+              ></div>
+            </div>
+
+            <!--Categoría con mayor gasto-->
+            <div class="columns is-mobile">
+              <div class="column is-6 has-text-weight-semibold">
+                Categoría con mayor gasto
+              </div>
+              <div class="column is-3 has-text-right">
+                <span
+                  class="tag is-primary is-light"
+                  id="categoria-mayor-gasto"
+                ></span>
+              </div>
+              <div
+                class="column is-3 has-text-weight-semibold has-text-right has-text-danger"
+                id="categoria-mayor-gasto-monto"
+              ></div>
+            </div>
+
+            <!--Categoría con mayor balance-->
+            <div class="columns is-mobile">
+              <div class="column is-6 has-text-weight-semibold">
+                Categoría con mayor balance
+              </div>
+              <div class="column is-3 has-text-right">
+                <span
+                  class="tag is-primary is-light"
+                  id="categoria-mayor-balance"
+                ></span>
+              </div>
+              <div
+                class="column is-3 has-text-weight-semibold has-text-right"
+                id="categoria-mayor-balance-monto"
+              ></div>
+            </div>
+
+            <!--Mes con mayor ganancia-->
+            <div class="columns is-mobile">
+              <div class="column is-6 has-text-weight-semibold">
+                Mes con mayor ganancia
+              </div>
+              <div
+                class="column is-3 has-text-right"
+                id="mes-mayor-ganancia"
+              ></div>
+              <div
+                class="column is-3 has-text-weight-semibold has-text-right has-text-success"
+                id="mes-mayor-ganancia-monto"
+              ></div>
+            </div>
+
+            <!--Mes con mayor gasto-->
+            <div class="columns is-mobile">
+              <div class="column is-6 has-text-weight-semibold">
+                Mes con mayor gasto
+              </div>
+              <div
+                class="column is-3 has-text-right"
+                id="mes-mayor-gasto"
+              ></div>
+              <div
+                class="column is-3 has-text-weight-semibold has-text-right has-text-danger"
+                id="mes-mayor-gasto-monto"
+              ></div>
+            </div>
+          </section> 
+
+      </div>
+     
+        </div>
+        
+
+      </section>
+     
+  
+
+
     </main>
     <!------ FIN DEL MAIN ------>
 
