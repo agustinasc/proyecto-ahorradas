@@ -125,7 +125,7 @@ JSON.parse(localStorage.getItem('operation')) == null ? showOperationTable(opera
 
 //****** MENU HAMBURGUESA *******//
 
-const funcion = () =>{
+const showBurguer = () =>{
     if (navBarBurguer.classList.contains('is-active')) {
         navBarBurguer.classList.remove('is-active')
         navbarBasicExample.classList.remove('is-active')
@@ -134,7 +134,7 @@ const funcion = () =>{
         navbarBasicExample.classList.add('is-active')
     }
 }
-navBarBurguer.addEventListener('click', funcion) 
+navBarBurguer.addEventListener('click', showBurguer) 
 //=> {
     //navbarBasicExample.style.display = 'block';
     //navBarBurguer.classList.toggle('is-active');
