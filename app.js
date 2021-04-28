@@ -14,7 +14,12 @@ const inputDate = document.getElementById('input-date');
 
 const operationTable = document.getElementById('operation-table');
 const includesOperation = document.getElementById('includes-operation');
-const noIncludesOperation = document.getElementById('no-includes-operation')
+const noIncludesOperation = document.getElementById('no-includes-operation');
+
+const navBarBurguer = document.getElementById('navbar-burger');
+const navbarBasicExample = document.getElementById('navbarBasicExample')
+//const navBarMenu = document.getElementById('navbar-menu');
+
 
 
 //********* EVENTS *********/
@@ -118,5 +123,24 @@ JSON.parse(localStorage.getItem('operation')) == null ? showOperationTable(opera
 //     }
 // }
 
+//****** MENU HAMBURGUESA *******//
 
+const funcion = () =>{
+    if (navBarBurguer.classList.contains('is-active')) {
+        navBarBurguer.classList.remove('is-active')
+        navbarBasicExample.classList.remove('is-active')
+    } else {
+        navBarBurguer.classList.add('is-active')
+        navbarBasicExample.classList.add('is-active')
+    }
+}
+navBarBurguer.addEventListener('click', funcion) 
+//=> {
+    //navbarBasicExample.style.display = 'block';
+    //navBarBurguer.classList.toggle('is-active');
+    // if(navBarBurguer.contains('is-active')){
+    //     navbarBasicExample.classList.remove('is-active')
+    // }
+    //console.log(e.target)
+//})
 
