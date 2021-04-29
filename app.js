@@ -19,8 +19,8 @@ const noIncludesOperation = document.getElementById('no-includes-operation');
 const navBarBurguer = document.getElementById('navbar-burger');
 const navbarBasicExample = document.getElementById('navbarBasicExample')
 //const navBarMenu = document.getElementById('navbar-menu');
-
-
+// const editOperation = document.getElementsById('edit-operation');
+// const deleteOperation = document.getElementsById('detele-operation');
 
 //********* EVENTS *********/
 
@@ -50,7 +50,10 @@ inputDate.value = `${years}-${months < 10 ? '0' + months: months}-${days < 10 ? 
 let operation = [];
 
 //********* FUNCION PARA AGREGAR OPERACIONES A LA TABLA DE OPERACIONES *********/
-
+const editOperaciones = (event)=>{
+    console.log(event.target.id);
+}
+console.log(uuidv4())
 
 const showOperationTable = (operation) =>{
     operationTable.innerHTML = '';
@@ -61,12 +64,18 @@ const showOperationTable = (operation) =>{
             <div class="column is-2-desktop is-family-monospace tag is-primary is-light is-medium is-3-mobile">${operation[i].categoria}</div>
             <div class="column is-3 is-family-monospace is-hidden-mobile">${operation[i].fecha}</div>
             <div class="column is-2-desktop is-family-monospace is-3-mobile">$${operation[i].monto}</div>
-            <div class="column is-2-desktop is-family-monospace is-3-mobile">${operation[i].tipo}</div>
+            <div class="column is-2-desktop is-family-monospace is-3-mobile">
+            <i class="fas fa-edit has-text-primary mr-4" 
+            onclick="editOperaciones(event)" id="${operation[i].id}">
+                <a href="#" id="edit-operation"></a></i>
+                <i class="fas fa-trash-alt has-text-danger"><a href="#" id="delete-operation"></a></i>
+            </div>
         </article>`;
         operationTable.insertAdjacentHTML('beforeend', box);
         //console.log(operation[i].descripcion);
         //console.log(caja);   
     }
+
 
     //******** FUNCION PARA APARECER Y DESAPARECER IMAGEN CUANDO EXISTEN OPERACIONES ********/
 
@@ -98,7 +107,8 @@ addOperationBtn.addEventListener('click', (e)=>{
         monto: inputAmount.value, 
         tipo: inputResult.value, 
         categoria: inputCategories.value,
-        fecha: inputDate.value 
+        fecha: inputDate.value,
+        id: uuidv4()
     }
     //console.log(newOperation);
     operation.push(newOperation);
