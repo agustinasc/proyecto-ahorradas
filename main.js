@@ -21,6 +21,12 @@ const orderBalance = document.getElementById("order-balance");
 const reportSection = document.getElementById("report-section");
 const reportButton = document.getElementById("report-button");
 
+//Categorías
+const categories = document.getElementById("categories");
+const newCategory = document.getElementById("new-category");
+const allCategories = document.getElementById("all-categories");
+const categoryButton = document.getElementById("category-button");
+
 
 
 
@@ -137,43 +143,28 @@ const categoryArr = ["Comida", "Servicios", "Salidas", "Educación", "Transporte
 
 const array = [];
 //console.log(operation)
-//operation = JSON.parse(localStorage.getItem('operation')) Hace desaparecer las nuevas operaciones del documento
+operation = JSON.parse(localStorage.getItem('operation'))?? []
 
 for (let i = 0; i < categoryArr.length; i++){
     const arrSpending = operation.filter(element => element.categoria === categoryArr[i] && element.tipo === "Gasto").reduce((inicial, current) => Number(inicial) + Number(current.monto) ,0)
     const arrGain = operation.filter(element => element.categoria === categoryArr[i] && element.tipo === "Ganancia").reduce((inicial, current) => Number(inicial) + Number(current.monto) ,0)
     array.push({nombre: categoryArr[i], ganancia: arrGain, gasto: arrSpending})
-    /* localStorage.setItem("array", JSON.stringify(array));
-    array = JSON.parse(localStorage.getItem("array")); No Va!*/
+     localStorage.setItem("array", JSON.stringify(array));
+    array1 = JSON.parse(localStorage.getItem("array")) ?? []; 
 }
 
 
 const result = Math.max(...array.map(valor => valor.ganancia))
-console.log(array);
+//console.log(array);
 
 
+//Categorías
+
+categoryButton.addEventListener("click", ()=>{
+    categories.style.display = "block"
+    balanceSection.style.display = "none" 
+    reportSection.style.display = "none"
+  })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  

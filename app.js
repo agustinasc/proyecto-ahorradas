@@ -101,6 +101,7 @@ addOperationBtn.addEventListener('click', (e)=>{
         fecha: inputDate.value 
     }
     //console.log(newOperation);
+    console.log(operation)
     operation.push(newOperation);
     localStorage.setItem('operation', JSON.stringify(operation));
     operation = JSON.parse(localStorage.getItem('operation'));
