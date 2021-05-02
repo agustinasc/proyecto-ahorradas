@@ -71,3 +71,24 @@
     font-family: 'Lexend', sans-serif;
     font-weight: bold;
 }
+
+/* *****Categorías****** */
+
+.button.is-success{
+    background-color:#3298DC;
+}
+
+.is-size-7.delete-link{
+    color: red;
+}
+
+.tag.is-primary.is-light{
+    font-size: 15px;
+}
+
+.section.mt-5.vista{
+    display: flex;
+    margin-left: 20%;
+}
+
+
