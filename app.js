@@ -50,10 +50,14 @@ inputDate.value = `${years}-${months < 10 ? '0' + months: months}-${days < 10 ? 
 let operation = [];
 
 //********* FUNCION PARA AGREGAR OPERACIONES A LA TABLA DE OPERACIONES *********/
-const editOperaciones = (event)=>{
-    console.log(event.target.id);
+
+const getId = (event)=>{
+    let editId = event.target.id;   
+    console.log(editId);
+
+    
 }
-console.log(uuidv4())
+//console.log(uuidv4())
 
 const showOperationTable = (operation) =>{
     operationTable.innerHTML = '';
@@ -65,15 +69,27 @@ const showOperationTable = (operation) =>{
             <div class="column is-3 is-family-monospace is-hidden-mobile">${operation[i].fecha}</div>
             <div class="column is-2-desktop is-family-monospace is-3-mobile">$${operation[i].monto}</div>
             <div class="column is-2-desktop is-family-monospace is-3-mobile">
-            <i class="fas fa-edit has-text-primary mr-4" 
-            onclick="editOperaciones(event)" id="${operation[i].id}">
-                <a href="#" id="edit-operation"></a></i>
-                <i class="fas fa-trash-alt has-text-danger"><a href="#" id="delete-operation"></a></i>
+                <i class="fas fa-edit has-text-primary mr-4" 
+                onclick="getId(event)" id="${operation[i].id}">
+                    <a href="#" id="edit-operation"></a>
+                </i>
+                <i class="fas fa-trash-alt has-text-danger"
+                 onclick="getId(event)" id="${operation[i].id}">
+                <a href="#" id="delete-operation"></a></i>
             </div>
         </article>`;
         operationTable.insertAdjacentHTML('beforeend', box);
         //console.log(operation[i].descripcion);
-        //console.log(caja);   
+        //console.log(caja); 
+        
+        //EDITAR OPERACIONES
+
+        const editOperationFn = (id) =>{
+            const operationToEdit = operation.find((e) => e.id === id);
+            console.log(operationToEdit);
+            console.log(operation[i].descripcion);
+        }
+        editOperationFn("ac93be82-e497-4f31-a2f4-b310a711c787")
     }
 
 
@@ -153,4 +169,3 @@ navBarBurguer.addEventListener('click', showBurguer)
     // }
     //console.log(e.target)
 //})
-
